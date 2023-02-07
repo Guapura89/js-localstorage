@@ -14,11 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
     p.appendChild(content);
     list.appendChild(p);
   } else {
-    // if (n > 0) {
     for (let i = 0; i < names.length; i++) {
       showNames(names, i);
     }
-    // } else
   }
 
   // Add new name to local storage
