@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/localstorage.css" />
+    <title>Localstorage</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="controller">
+        <div class="controller__content">
+          <h1>List of names</h1>
+          <label for="in_name">Enter a name to add it in the list</label>
+          <input
+            type="text"
+            id="in_name"
+            class="controller__input"
+            placeholder="John Smith"
+          />
+          <button class="controller__btn" id="add">Add</button>
+        </div>
+      </div>
+      <div class="list">
+        <div class="list__content" id="list__content"></div>
+      </div>
+    </div>
+
+    <script src="./src/js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+* {
+  font-family: sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.controller,
+.list {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controller {
+  background-image: url("https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load");
+}
+
+.list {
+  overflow: scroll;
+}
+.controller__content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.795);
+  padding: 100px 0;
+  border-radius: 20px;
+}
+
+.controller__content label {
+  color: rgb(68, 77, 87);
+}
+
+.controller__input {
+  padding: 10px;
+  border: 3px solid rgba(255, 255, 255, 0.795);
+  width: 70%;
+  outline: none;
+  border-radius: 5px;
+}
+
+.controller__input:focus {
+  border: 3px solid rgb(78, 78, 211);
+}
+
+.controller__btn {
+  padding: 10px;
+  color: rgb(78, 78, 211);
+  border: 1px solid rgb(78, 78, 211);
+  border-radius: 25px;
+  font-weight: bold;
+  width: 60%;
+}
+
+.controller__btn:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rgb(78, 78, 211);
+}
+
+.list__content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.list__content div {
+  width: 100%;
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+  border-bottom: 2px solid rgb(78, 78, 211);
+}
+
+.list__content div button {
+  background-color: red;
+  color: white;
+  border: none;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.list__content div button:hover {
+  background-color: rgb(233, 79, 79);
+  cursor: pointer;
+}
+
+/* Breackpoints */
+
+@media (max-width: 1000px) {
+  .controller__content {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+  .controller,
+  .list {
+    width: 100%;
+  }
+
+  .list {
+    overflow: initial;
+    height: 100%;
+  }
+}
