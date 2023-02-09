@@ -2,6 +2,7 @@ const newName = document.getElementById("in_name");
 const btn_add = document.getElementById("add");
 const list = document.getElementById("list__content");
 const control = document.getElementById("controller");
+const label = document.getElementById("label");
 
 // Create local storage
 document.addEventListener("DOMContentLoaded", function () {
@@ -116,6 +117,9 @@ function upd(i) {
   btna.classList.add("controller__btnUpdate");
   control.appendChild(btna);
 
+  label.innerHTML = "Change the name:";
+  label.style.color = "rgb(50, 141, 118)";
+
   // Updating item in localstorage
   btna.onclick = () => {
     if (newName.value != "") {
@@ -132,6 +136,8 @@ function upd(i) {
       newName.value = "";
       btna.remove();
       btn_add.style.display = "initial";
+      label.innerHTML = "Enter a name to add it in the list";
+      label.style.color = "rgb(68, 77, 87)";
     } else {
       alert("Ups, You need to enter a name");
     }
