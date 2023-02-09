@@ -26,6 +26,11 @@ body {
   background-image: url("https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load");
 }
 
+#controller {
+  width: 100%;
+  text-align: center;
+}
+
 .list {
   overflow: scroll;
 }
@@ -34,6 +39,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: 20px;
   background-color: rgba(255, 255, 255, 0.795);
   padding: 100px 0;
@@ -65,6 +71,21 @@ body {
   width: 60%;
 }
 
+.controller__btnUpdate {
+  padding: 10px;
+  color: rgb(50, 141, 118);
+  border: 1px solid rgb(50, 141, 118);
+  border-radius: 25px;
+  font-weight: bold;
+  width: 60%;
+}
+
+.controller__btnUpdate:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rgb(50, 141, 118);
+}
+
 .controller__btn:hover {
   cursor: pointer;
   color: white;
@@ -87,7 +108,7 @@ body {
   border-bottom: 2px solid rgb(78, 78, 211);
 }
 
-.list__content div button {
+.btn__delete {
   background-color: red;
   color: white;
   border: none;
@@ -96,9 +117,26 @@ body {
   border-radius: 15px;
 }
 
-.list__content div button:hover {
-  background-color: rgb(233, 79, 79);
+.btn__update {
+  background-color: rgb(78, 78, 211);
+  color: white;
+  border: none;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.btn__delete:hover,
+.btn__update:hover {
   cursor: pointer;
+  filter: brightness(0.8);
+}
+
+.list__content .btn__container {
+  display: flex;
+  gap: 10px;
+  width: auto;
+  border: none;
 }
 
 /* Breackpoints */
